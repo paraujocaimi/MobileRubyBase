@@ -1,11 +1,11 @@
 # Etapas para rodar o projeto 
 
-## Android Studio 
+## 01. Android Studio 
 
 1. Instalar o android studio https://developer.android.com/studio/index.html?hl=pt-br 
 2. Configurar o JAVA_HOME e ANDROID_HOME
 
-## Ruby 
+## 02. Ruby 
 
 1. Instalar o Ruby https://rubyinstaller.org/downloads/ com a versão mais estável 
 
@@ -31,10 +31,10 @@ gem install bundler
 bundler --version
 ```
 
-## Emulador
+## 03. Emulador
 1. Realizar download do Genymotion com o virtualBox https://www.genymotion.com/download/
 
-## Appium - windows
+## 04. Appium - windows
 
 1. Na raiz do computador criar a pasta para o projeto 
 ```
@@ -65,7 +65,7 @@ appium-doctor --android
 ```
 para verificar se não está faltando nada no computador .
 
-## Subir aplicação 
+## 05. Subir aplicação 
 
 1. Abrir o Genymotion e esperar carregar o device 
 
@@ -80,6 +80,21 @@ para verificar se não está faltando nada no computador .
 5. Pelo cmd dentro da pasta que está o arquivo appium.txt e o apk,inserir o comando 
 ```
 Arc
+```
+
+## 06. Rodar Cenarios
+
+
+1. Para rodar um cenário especifico, é só adicionar a @tag do projeto 
+
+```
+cucumber -t @tag 
+```
+
+2. Para rodar todos os cenários 
+
+```
+cucumber
 ```
 
 # Como escrever novos cenários 
