@@ -1,0 +1,8 @@
+[caps]
+platformName = "Android"
+deviceName = "Android Emulator"
+udid = "192.168.39.101:5555"
+app = "c:\\mobileFramework\\appium\\pixel\\config\\apk\\app-debug.apk"
+appPackage = "qaninja.com.pixel"
+appActivity = "qaninja.com.pixel.SplashScreen"
+automationName = "uiautomator2"
