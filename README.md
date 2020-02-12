@@ -110,3 +110,9 @@ cucumber --init
 ```
 cucumber
 ```
+
+3. Rodar teste e gerar report no final 
+
+```
+cucumber -t @tag --format html --out=log/report.html
+```
