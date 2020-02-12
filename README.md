@@ -1,11 +1,24 @@
 # Etapas para rodar o projeto 
 
-## 01. Android Studio 
+## Descrição 
+
+## Pré-requisitos
+
+- Android Studio
+- Java 8
+- JAVA_HOME e ANDROID_HOME configurados
+- Ruby
+- Appium
+- Genymotion (opcional)
+
+## Passo a passo para instações
+
+### 01. Android Studio 
 
 1. Instalar o android studio https://developer.android.com/studio/index.html?hl=pt-br 
 2. Configurar o JAVA_HOME e ANDROID_HOME
 
-## 02. Ruby 
+### 02. Ruby 
 
 1. Instalar o Ruby https://rubyinstaller.org/downloads/ com a versão mais estável 
 
@@ -31,10 +44,10 @@ gem install bundler
 bundler --version
 ```
 
-## 03. Emulador
+### 03. Emulador
 1. Realizar download do Genymotion com o virtualBox https://www.genymotion.com/download/
 
-## 04. Appium - windows
+### 04. Appium - windows
 
 1. Na raiz do computador criar a pasta para o projeto 
 ```
@@ -63,26 +76,51 @@ gem install eventmachine --platform ruby
 ``` 
 appium-doctor --android
 ```
-para verificar se não está faltando nada no computador .
+para verificar se não está faltando nada no computador.
 
-## 05. Subir aplicação 
+## Executar projeto
+
+### Subir aplicação 
 
 1. Abrir o Genymotion e esperar carregar o device 
 
-1.1 O comando ```adb devices``` no prompt irá dar o id do device emulado pelo genymotion, necessário para utilizar no arquivo ```appium.tx``` do step 3.
+2. Com o promt aberto e com permissão de administrar, rodar o comando abaixo para verificar o id do device emulado 
 
-2. Dentro do projeto existe a pasta apk que contém o  apk para ser realizado o teste.
+ ```
+ adb devices
+ ``` 
+necessário para utilizar no arquivo ```appium.tx```.
 
-3. No arquivo appium.txt, possui todas as caps necessárias para subir a aplicação 
+3. Dentro do projeto existe a pasta apk que contém o  apk para ser realizado o teste.
 
-4. Com o comando ```appium``` pelo cmd a aplicação irá subir 
+4. No arquivo appium.txt, possui todas as caps necessárias para subir a aplicação 
 
-5. Pelo cmd dentro da pasta que está o arquivo appium.txt e o apk,inserir o comando 
+5. Com o comando abaixo pelo cmd a aplicação irá subir
+
+```
+appium
+``` 
+ 
+6. Pelo cmd dentro da pasta que está o arquivo appium.txt e o apk,inserir o comando 
 ```
 Arc
 ```
 
-## 06. Rodar Cenarios
+### Como escrever novos cenários 
+
+1. Pela linha de comando na raiz do projeto escreva o comando a baixo, ele irá criar a estrutura de pastas, para a escrita do cenário
+
+```
+cucumber --init
+``` 
+
+2. Para receber os steps prontos, após criar a feature apenas digite no cmd o comando abaixo no cmd e ele irá te passar o step. 
+
+```
+cucumber
+```
+
+### Rodar Cenarios
 
 
 1. Para rodar um cenário especifico, é só adicionar a @tag do projeto 
@@ -92,20 +130,6 @@ cucumber -t @tag
 ```
 
 2. Para rodar todos os cenários 
-
-```
-cucumber
-```
-
-# Como escrever novos cenários 
-
-1. Pela linha de comando na raiz do projeto escreva o comando a baixo, ele irá criar a estrutura de pastas, para a escrita do cenário
-
-```
-cucumber --init
-``` 
-
-2. Para receber os steps prontos, após criar a feature apenas digite no cmd o comando abaixo no cmd e ele irá te passar o step. 
 
 ```
 cucumber
