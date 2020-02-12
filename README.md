@@ -11,7 +11,7 @@
 - Appium
 - Genymotion (opcional)
 
-## Passo a passo para instações
+## Passo a passo para instalações
 
 ### 01. Android Studio 
 
