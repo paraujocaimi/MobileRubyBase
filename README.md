@@ -101,7 +101,7 @@ necessário para utilizar no arquivo ```appium.tx```.
 appium
 ``` 
  
-6. Pelo cmd dentro da pasta que está o arquivo appium.txt e o apk,inserir o comando 
+6. Pelo cmd dentro da pasta que está o arquivo ```appium.tx``` e o apk,inserir o comando 
 ```
 Arc
 ```
