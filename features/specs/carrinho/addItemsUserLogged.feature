@@ -1,15 +1,14 @@
 #language: pt
 
-Funcionalidade: Adicionar item ao carrinho
+Funcionalidade: Adicionar item ao carrinho com usuario logado
     Para que eu possa comprar jogos clássicos na lojinha
     Sendo um usuário cadastrado
     Posso adicionar itens no carrinho
 
-    Background: Login
+    Contexto: Login
         Dado que acesso a tela de login
         Quando eu faço login com "tony@stark.com" e "pass123"
-        Então posso ver a tela minha conta
-        
+
     @add_item
     Cenario: Usuario logado adicionado jogo
 

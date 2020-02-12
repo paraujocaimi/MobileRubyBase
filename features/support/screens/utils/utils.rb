@@ -7,8 +7,8 @@ class Button
 
   def findButtonWithTextAndClick(element_id, text, upcase)
     upercase = upcase
-    find_element(id: element_id).text(text.upcase!).click if upercase.eql?(true)
-    find_element(id: element_id).text(text).click if upercase.eql?(false)
+    find_elements(id: element_id).text(text.upcase!).click if upercase.eql?(true)
+    find_elements(id: element_id).text(text).click if upercase.eql?(false)
   end
 
 end
