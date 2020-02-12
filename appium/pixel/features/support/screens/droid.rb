@@ -1,11 +1,14 @@
 
 require_relative "android/screens"
+require_relative "utils/utils"
+
 
 class DroidScreens
-  attr_accessor :home, :login, :my_account
+  attr_accessor :button, :text, :login, :my_account
 
   def initialize
-    @home = Home.new
+    @button = Button.new
+    @text = Text.new
     @login = Login.new
     @my_account = MyAccount.new
   end

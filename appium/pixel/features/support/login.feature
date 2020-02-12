@@ -15,7 +15,7 @@ Funcionalidade: Login
     @login_happiless
     Esquema do Cenario: Tentar logar
 
-        Dado que acesso a tela de logcd ..in
+        Dado que acesso a tela de login
         Quando eu faço login com <email> e <senha>
         Então devo ver <mensagem> como popup
 
