@@ -9,3 +9,4 @@ class MyAccount
     find_element(id: "qaninja.com.pixel:id/account")
   end
 end
+

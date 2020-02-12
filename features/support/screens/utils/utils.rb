@@ -4,6 +4,13 @@ class Button
     # embed(screenshot, "image/png","Screenshot")
     find_element(id: element_id).click
   end
+
+  def findButtonWithTextAndClick(element_id, text, upcase)
+    upercase = upcase
+    find_element(id: element_id).text(text.upcase!).click if upercase.eql?(true)
+    find_element(id: element_id).text(text).click if upercase.eql?(false)
+  end
+
 end
 
 class Text
@@ -13,6 +20,14 @@ class Text
     # embed(screenshot, "image/png","Screenshot")
   end
 end
+
+class PopUp
+  def popup
+    find_element(id: "android:id/message")
+  end
+end
+
+
 
 ## Verificar por que não consigo verificar este tipo de validação
 # class Validations
