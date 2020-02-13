@@ -1,0 +1,95 @@
+[
+  {
+    "uri": "features/specs/login/login.feature",
+    "id": "login",
+    "keyword": "Funcionalidade",
+    "name": "Login",
+    "description": "    Para que eu possa fazer compras dos itens clássicos\n    Sendo um usuário cadastrado\n    Posso me autenticar pela tela de login",
+    "line": 4,
+    "tags": [
+      {
+        "name": "@loginFeature",
+        "line": 3
+      }
+    ],
+    "elements": [
+      {
+        "id": "login;usuário-logado",
+        "keyword": "Cenario",
+        "name": "Usuário logado",
+        "description": "",
+        "line": 10,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@loginFeature",
+            "line": 3
+          },
+          {
+            "name": "@login_happy",
+            "line": 9
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:4"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "An unknown server-side error occurred while processing the command. Original error: zipAlignApk failed. Original error: Command 'C:\\\\Users\\\\priscila.caimi\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\build-tools\\\\29.0.3\\\\zipalign.exe -f 4 C:\\\\Users\\\\PRISCI~1.CAI\\\\AppData\\\\Local\\\\Temp\\\\2020113-18076-zgl8vh.o5uni\\\\uc.apk C:\\\\Users\\\\PRISCI~1.CAI\\\\AppData\\\\Local\\\\Temp\\\\2020113-18076-1ruzlrg.07h2\\\\appium.tmp' exited with code 1. Stdout: ''; Stderr: 'Unable to open 'C:\\Users\\PRISCI~1.CAI\\AppData\\Local\\Temp\\2020113-18076-zgl8vh.o5uni\\uc.apk' as zip archive\r\n' (Selenium::WebDriver::Error::UnknownError)\nUnknownError: An unknown server-side error occurred while processing the command. Original error: zipAlignApk failed. Original error: Command 'C:\\\\Users\\\\priscila.caimi\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\build-tools\\\\29.0.3\\\\zipalign.exe -f 4 C:\\\\Users\\\\PRISCI~1.CAI\\\\AppData\\\\Local\\\\Temp\\\\2020113-18076-zgl8vh.o5uni\\\\uc.apk C:\\\\Users\\\\PRISCI~1.CAI\\\\AppData\\\\Local\\\\Temp\\\\2020113-18076-1ruzlrg.07h2\\\\appium.tmp' exited with code 1. Stdout: ''; Stderr: 'Unable to open 'C:\\Users\\PRISCI~1.CAI\\AppData\\Local\\Temp\\2020113-18076-zgl8vh.o5uni\\uc.apk' as zip archive\r\n'\n    at getResponseForW3CError (C:\\Program Files\\Appium\\resources\\app\\node_modules\\appium\\node_modules\\appium-base-driver\\lib\\protocol\\errors.js:804:9)\n    at asyncHandler (C:\\Program Files\\Appium\\resources\\app\\node_modules\\appium\\node_modules\\appium-base-driver\\lib\\protocol\\protocol.js:388:37)\n    at process._tickCallback (internal/process/next_tick.js:68:7)\n./features/support/hooks.rb:5:in `Before'",
+              "duration": 10181032000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que acesso a tela de login",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/loginSteps.rb:1"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "eu faço login com \"tony@stark.com\" e \"pass123\"",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/loginSteps.rb:6"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "posso ver a tela minha conta",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/loginSteps.rb:26"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:26"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "undefined method `screenshot_as' for nil:NilClass\nDid you mean?  screenshot (NoMethodError)\n./features/support/hooks.rb:27:in `After'",
+              "duration": 87700
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

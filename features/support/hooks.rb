@@ -1,4 +1,5 @@
-
+require 'report_builder'
+require 'date'
 
 Before do
   driver.start_driver
@@ -27,3 +28,27 @@ After do
   embed(screenshot, "image/png", "Screenshot")
   driver.quit_driver
 end
+
+# https://github.com/rajatthareja/ReportBuilder
+at_exit do
+
+  @infos = {
+    "device" => "Android",
+    "environment" => "Dev",
+    "Data do Teste" => Time.now.to_s,
+    "include_images" => true,
+    "voice_commands" => true
+  }
+
+  ReportBuilder.configure do |config |
+    config.input_path = 'report/json/cucumber.json'
+    config.report_path = 'report/html/test'+slice(Time.now)
+    config.report_types = [:html]
+    config.report_title = 'Pixel App'
+    config.additional_info = @infos
+    config.color = "red"
+  end
+  ReportBuilder.build_report
+end
+
+
