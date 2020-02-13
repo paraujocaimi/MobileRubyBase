@@ -1,15 +1,15 @@
-
 require_relative "android/screens"
-require_relative "utils/utils"
+require_relative "utils/generalElementActions.rb"
+require_relative "../helpers/generalFunctions"
 
 
 class DroidScreens
-  attr_accessor :button, :text, :login, :my_account
+  attr_accessor :button, :text,:pop_up, :my_account,:generalFunctions
 
   def initialize
     @button = Button.new
     @text = Text.new
-    @login = Login.new
     @my_account = MyAccount.new
+    @generalFunctions = GeneralFunctions.new
   end
 end
