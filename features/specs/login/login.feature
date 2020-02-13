@@ -1,5 +1,6 @@
 #language: pt
 
+@loginFeature
 Funcionalidade: Login
     Para que eu possa fazer compras dos itens clássicos
     Sendo um usuário cadastrado

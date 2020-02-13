@@ -1,12 +1,10 @@
 Dado("que acesso a tela de login") do
-    @screen.button.buttonClick("qaninja.com.pixel:id/accountButt")
-  end
+    @screen.generalFunctions.clickAccount()
+end
   
 
 Quando("eu faço login com {string} e {string}") do |email, pass|
-  @screen.text.inputText("qaninja.com.pixel:id/usernameTxt", email)
-  @screen.text.inputText("qaninja.com.pixel:id/passwordTxt", pass)
-  @screen.button.buttonClick("qaninja.com.pixel:id/loginButt")
+  @screen.generalFunctions.login(email,pass)
 end
 
 Quando("logo sem sucesso {int} vezes") do |tentativas|
@@ -14,7 +12,7 @@ Quando("logo sem sucesso {int} vezes") do |tentativas|
     steps %(
         Quando eu faço login com "tony@stark.com" e "123pass"
     )
-    expect(@screen.login.popup.displayed?).to be true
+    expect(@screen.generalFunctions.popup.displayed?).to be true
     back
   end
 end
@@ -26,10 +24,12 @@ Quando("faço login na última tentativa") do
 end
 
 Então("posso ver a tela minha conta") do
-  @screen.button.buttonClick("qaninja.com.pixel:id/accountButt")
+  sleep 2
+  find_element(id:"qaninja.com.pixel:id/accountButt").click
+  sleep 2
   expect(@screen.my_account.view.displayed?).to be true
 end
 
 Então("devo ver {string} como popup") do |mensagem_esperada|
-  expect(@screen.login.popup.text).to eql mensagem_esperada
+  expect(@screen.generalFunctions.popup.text).to eql mensagem_esperada
 end
