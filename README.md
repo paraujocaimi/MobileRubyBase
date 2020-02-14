@@ -1,14 +1,17 @@
-# Etapas para rodar o projeto 
+# Mobile Ruby Framework 
 
-## Descrição 
+## Descrição
+
+Framework base para testes automatizados mobile.
 
 ## Pré-requisitos
 
+- Ruby
+- bundler
 - Android Studio
 - Java 8
-- JAVA_HOME e ANDROID_HOME configurados
-- Ruby
-- Appium
+- Váriaveis de ambiente JAVA_HOME e ANDROID_HOME configurados
+- Appium Desktop
 - Genymotion (opcional)
 
 ## Passo a passo para instalações
@@ -91,52 +94,65 @@ para verificar se não está faltando nada no computador.
  ``` 
 necessário para utilizar no arquivo ```appium.tx```.
 
-3. Dentro do projeto existe a pasta apk que contém o  apk para ser realizado o teste.
+3. Dentro do projeto existe a pasta ```config/apk``` que contém o  apk para ser realizado o teste.
 
-4. No arquivo appium.txt, possui todas as caps necessárias para subir a aplicação 
+4. No arquivo appium.txt, possui todas as caps necessárias para subir a aplicação e onde você irá adicionar o uid do device, este uid você descobre na etapa 2. 
 
 5. Com o comando abaixo pelo cmd a aplicação irá subir
 
 ```
 appium
 ``` 
+
+ou se você utilizar o Appium Desktop, será apenas clicar em ```Start Server```
  
-6. Pelo cmd dentro da pasta que está o arquivo ```appium.tx``` e o apk,inserir o comando 
+6. Pelo cmd dentro da pasta que está o arquivo ```appium.tx```,inserir o comando 
 ```
 Arc
 ```
-
-### Como escrever novos cenários 
-
-1. Pela linha de comando na raiz do projeto escreva o comando a baixo, ele irá criar a estrutura de pastas, para a escrita do cenário
+com este comando você irá conseguir mapear os elemento da pagina, inserindo apenas o comando 
 
 ```
-cucumber --init
-``` 
-
-2. Para receber os steps prontos, após criar a feature apenas digite no cmd o comando abaixo no cmd e ele irá te passar o step. 
-
-```
-cucumber
+page
 ```
 
-### Rodar Cenarios
+## Estrutura de pastas 
+
+Árvore de arquivos :
+```
+├── Projeto
+│   ├── Config
+│   │   └── apk
+│   └── Wiki
+├── features
+│   ├── step_definitions
+│   ├── support
+│   │   ├── caps
+│   │   ├── screens
+│   │   │  └── android
+│   │   │  └── ios
+│   │   │  └── utils
+│   ├── log
+│   └── README.md
+```
+
+## Rodar Cenarios
 
 
-1. Para rodar um cenário especifico, é só adicionar a @tag do projeto 
+- Cucumber Report
+
+```
+cucumber -t @tag --format html --out log/cenarioName.html
+```
+
+- Report html 
 
 ```
 cucumber -t @tag 
 ```
 
-2. Para rodar todos os cenários 
 
-```
-cucumber
-```
+## Envolvidos
 
-3. Rodar teste e gerar report no final 
+Priscila de Araujo Caimi - priscila.caimi@cwi.com.br
 
-```
-cucumber -t @tag --format html --out log/cenarioName.html
-```
