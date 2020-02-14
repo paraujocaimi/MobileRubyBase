@@ -135,8 +135,18 @@ cucumber -t @tag
 cucumber
 ```
 
-3. Rodar teste e gerar report no final 
+3. Rodar teste e gerar 
+
+3.1 Cucumber Report no final 
 
 ```
 cucumber -t @tag --format html --out log/cenarioName.html
 ```
+
+3.2 Report html 
+
+    ```
+    cucumber -t @tag 
+    ```
+
+
