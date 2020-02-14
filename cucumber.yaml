@@ -1,2 +1,0 @@
----
-default: -f json -o report/json/cucumber.json -f pretty

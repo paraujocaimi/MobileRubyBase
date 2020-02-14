@@ -11,10 +11,6 @@
 /tmp/
 /report/
 
-# reports 
-/report/html
-/report/json
-
 # Used by dotenv library to load environment variables.
 # .env
 
