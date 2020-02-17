@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-# Mobile Ruby Framework 
-
-## Descrição
-
-Framework base para testes automatizados mobile.
-
-## Pré-requisitos
-
-- Ruby
-- bundler
-
-## Guia de instalação
-
-### Ruby 
-=======
 # Etapas para rodar o projeto 
 
 ## Descrição 
@@ -35,15 +19,10 @@ Framework base para testes automatizados mobile.
 2. Configurar o JAVA_HOME e ANDROID_HOME
 
 ### 02. Ruby 
->>>>>>> reports
 
 1. Instalar o Ruby https://rubyinstaller.org/downloads/ com a versão mais estável 
 
 2. Após instalar verificar a versão do ruby 
-<<<<<<< HEAD
-
-=======
->>>>>>> reports
 ```
 ruby --version
 ```
@@ -65,14 +44,10 @@ gem install bundler
 bundler --version
 ```
 
-<<<<<<< HEAD
-### Appium 
-=======
 ### 03. Emulador
 1. Realizar download do Genymotion com o virtualBox https://www.genymotion.com/download/
 
 ### 04. Appium - windows
->>>>>>> reports
 
 1. Na raiz do computador criar a pasta para o projeto 
 ```
@@ -97,37 +72,6 @@ gem uninstall eventmachine
 ```
 gem install eventmachine --platform ruby
 ```
-<<<<<<< HEAD
-7. Após realizar a instalação de todos as dependencias necessárias rodar o abaixo para verificar se não está faltando nada no computador.
-
-``` 
-appium-doctor --android
-```
-
-## Estrutura de pastas 
-
-Árvore de arquivos :
-```
-├── Projeto
-│   ├── Config
-│   │   └── apk
-│   └── Wiki
-├── features
-│   ├── step_definitions
-│   ├── support
-│   │   ├── caps
-│   │   ├── screens
-│   │   │  └── android
-│   │   │  └── ios
-│   │   │  └── utils
-│   ├── log
-│   └── README.md
-```
-
-## Envolvidos
-
-Priscila de Araujo Caimi - paraujocaimi@gmail.com
-=======
 7. Após realizar a instalação de todos as dependencias necessárias rodar o 
 ``` 
 appium-doctor --android
@@ -205,5 +149,4 @@ cucumber -t @tag --format html --out log/cenarioName.html
     cucumber -t @tag 
     ```
 
->>>>>>> reports
 
