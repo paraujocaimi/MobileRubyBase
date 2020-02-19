@@ -2,7 +2,7 @@
 platformName = "Android"
 deviceName = 'VirtualDevice'
 udid = '192.168.39.101:5555'
-app = "config\\apk\\app-debug.apk"
+app = ''
 appPackage = "qaninja.com.pixel"
 appActivity = "qaninja.com.pixel.SplashScreen"
 automationName = 'uiautomator2'

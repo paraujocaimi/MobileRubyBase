@@ -25,7 +25,8 @@ Before("@clean_cart") do
 end
 
 # After execute all scenario will take a screenshot
-After do
+After do |scenario|
+  @cenario = scenario.feature.name
   screenshot = driver.screenshot_as(:base64)
   embed(screenshot, "image/png", "Screenshot")
   driver.quit_driver

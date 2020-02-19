@@ -1,4 +1,5 @@
 class GeneralFunctions
+  
   def clickAccount() 
       find_element(id:"qaninja.com.pixel:id/accountButt").click
   end
@@ -28,4 +29,5 @@ class GeneralFunctions
     def cancel_popup
       find_element(id: "android:id/button2").click
     end
+
 end

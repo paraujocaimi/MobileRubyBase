@@ -1,4 +1,5 @@
 Dado("que acesso a tela de login") do
+  sleep 2
   @screen.generalFunctions.clickAccount()
 end
 
@@ -24,12 +25,12 @@ steps %(
 end
 
 Então("posso ver a tela minha conta") do
-sleep 2
-find_element(id:"qaninja.com.pixel:id/accountButt").click
-sleep 2
-expect(@screen.my_account.view.displayed?).to be true
+  sleep 2
+  find_element(id:"qaninja.com.pixel:id/accountButt").click
+  sleep 2
+  expect(@screen.my_account.view.displayed?).to be true
 end
 
 Então("devo ver {string} como popup") do |mensagem_esperada|
-expect(@screen.generalFunctions.popup.text).to eql mensagem_esperada
+  expect(@screen.generalFunctions.popup.text).to eql mensagem_esperada
 end
