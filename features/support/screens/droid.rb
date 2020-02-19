@@ -1,6 +1,5 @@
 
 require_relative "android/screens"
-require_relative "utils/generalElementActions.rb"
 require_relative "../helpers/generalFunctions"
 
 
